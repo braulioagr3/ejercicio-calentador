@@ -2,18 +2,20 @@ public class Calentador
 {
     // instance variables - replace the example below with your own
     private int temperatura;
+    private int incremento;
     public Calentador()
     {
         // initialise instance variables
         temperatura = 15;
+        incremento = 3;
     }
     public void Calentar()
     {
-        temperatura = temperatura + 5;
+        temperatura = temperatura + incremento;
     }
     public void enfriar()
     {
-        temperatura = temperatura - 5;
+        temperatura = temperatura - incremento;
     }
     public void Termostato()
     {
