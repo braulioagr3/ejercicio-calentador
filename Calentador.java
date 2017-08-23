@@ -11,11 +11,17 @@ public class Calentador
     }
     public void Calentar()
     {
-        temperatura = temperatura + incremento;
+        if(temperatura < 30)
+        {
+            temperatura = temperatura + incremento;
+        }
     }
     public void enfriar()
     {
-        temperatura = temperatura - incremento;
+        if(temperatura > -10)
+        {
+            temperatura = temperatura - incremento;
+        }
     }
     public void Termostato()
     {
