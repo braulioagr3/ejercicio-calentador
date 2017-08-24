@@ -3,28 +3,44 @@ public class Calentador
     // instance variables - replace the example below with your own
     private int temperatura;
     private int incremento;
-    public Calentador()
+    private int min;
+    private int max;
+    public Calentador(int maxI, int minI)
     {
         // initialise instance variables
+        min=minI;
+        max=maxI;
         temperatura = 15;
         incremento = 3;
     }
-    public void Calentar()
+    public void calentar()
     {
-        if(temperatura < 30)
+        int cambio;
+        cambio = temperatura + incremento;
+        if(cambio < max)
         {
-            temperatura = temperatura + incremento;
+            temperatura = cambio;
         }
     }
     public void enfriar()
     {
-        if(temperatura > -10)
+        int cambio;
+        cambio = temperatura - incremento;
+        if(cambio > min)
         {
-            temperatura = temperatura - incremento;
+            temperatura = cambio;
         }
     }
-    public void Termostato()
+    public int termostato()
     {
-        System.out.println("La temperatura actual es: "+temperatura);
+        return temperatura;
+    }
+    public void aumentaIncremento(int aumento)
+    {
+        if(aumento>0)
+        {
+            incremento=aumento;
+        }
     }
 }
+                                        
